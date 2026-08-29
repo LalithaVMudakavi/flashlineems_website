@@ -1,26 +1,225 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* ========================================
+     FLASHLINE BRAND COLORS
+  ======================================== */
+
+  --flashline-primary: #087F68;
+  --flashline-primary-dark: #056653;
+  --flashline-primary-light: #DDF3ED;
+
+  --flashline-accent: #3A8F7B;
+  --flashline-accent-light: #EAF7F3;
+
+  /* ========================================
+     TEXT
+  ======================================== */
+
+  --flashline-heading: #151B19;
+  --flashline-graphite: #37423F;
+  --flashline-muted: #6B7773;
+
+  /* ========================================
+     BACKGROUNDS
+  ======================================== */
+
+  --flashline-white: #FFFFFF;
+  --flashline-light: #F8FAF9;
+  --flashline-section: #F0F6F3;
+  --flashline-mint: #EAF7F3;
+
+  /* ========================================
+     BORDERS
+  ======================================== */
+
+  --flashline-border: #DDE8E4;
+  --flashline-border-light: #EAF0EE;
+
+  /* ========================================
+     TECHNICAL ELEMENTS
+  ======================================== */
+
+  --flashline-grid: rgba(8, 127, 104, 0.055);
+  --flashline-glow: rgba(8, 127, 104, 0.10);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  margin: 0;
+  background: var(--flashline-white);
+  color: var(--flashline-graphite);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+button,
+a,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: var(--flashline-primary);
+  color: white;
+}
+
+/* ---------------------------------------
+   Container
+--------------------------------------- */
+
+.container-flashline {
+  width: min(100% - 2rem, 1280px);
+  margin-inline: auto;
+}
+
+@media (min-width: 768px) {
+  .container-flashline {
+    width: min(100% - 4rem, 1280px);
+  }
+}
+
+/* ---------------------------------------
+   PCB Grid
+--------------------------------------- */
+
+.pcb-grid {
+  background-image:
+    linear-gradient(
+      var(--flashline-grid) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      var(--flashline-grid) 1px,
+      transparent 1px
+    );
+
+  background-size: 40px 40px;
+}
+
+/* ---------------------------------------
+   Technical Glow
+--------------------------------------- */
+
+.technical-glow {
+  position: relative;
+  overflow: hidden;
+}
+
+.technical-glow::before {
+  content: "";
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  border-radius: 9999px;
+
+  background: var(--flashline-glow);
+
+  filter: blur(100px);
+
+  pointer-events: none;
+}
+
+/* ---------------------------------------
+   Circuit Animation
+--------------------------------------- */
+
+.circuit-line {
+  stroke-dasharray: 8 10;
+  animation: circuit-flow 4s linear infinite;
+}
+
+@keyframes circuit-flow {
+  to {
+    stroke-dashoffset: -80;
+  }
+}
+
+/* ---------------------------------------
+   Floating Signal
+--------------------------------------- */
+
+.signal-dot {
+  animation: signal-pulse 2s ease-in-out infinite;
+}
+
+@keyframes signal-pulse {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(0.8);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ---------------------------------------
+   Section Spacing
+--------------------------------------- */
+
+.section-padding {
+  padding-block: 5rem;
+}
+
+@media (min-width: 1024px) {
+  .section-padding {
+    padding-block: 7rem;
+  }
+}
+
+/* ---------------------------------------
+   Page Transitions
+--------------------------------------- */
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.8s ease-out both;
+}
+
+/* ---------------------------------------
+   Accessibility
+--------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
