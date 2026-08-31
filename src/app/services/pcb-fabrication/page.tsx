@@ -574,7 +574,7 @@ const pcbTypes = [
   },
   {
     title: "HDI Flex PCB",
-    href: "/capabilities/pcb-fabrication/rigid-flex-pcb",
+    href: "/capabilities/pcb-fabrication/hdipcb",
     image: "/pcbfabricationserviceimages/hdiflexpcb.png",
     icon: CircuitBoard,
     description:
