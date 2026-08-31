@@ -512,21 +512,21 @@ export default function PcbAssemblyPage() {
 
                 <div className="relative overflow-hidden rounded-[18px]">
 
-                  <Image
-                    src={assemblyContent.image}
-                    alt="PCB Assembly"
-                    width={1200}
-                    height={700}
-                    className="
-                      h-[340px]
-                      w-full
-                      object-cover
-                      transition-transform
-                      duration-700
-                      hover:scale-105
-                      lg:h-[440px]
-                    "
-                  />
+                 <Image
+  src="/services/pcbassemblyimage.png"
+  alt="Component procurement"
+  width={1200}
+  height={700}
+  className="
+    h-[340px]
+    w-full
+    object-cover
+    transition-transform
+    duration-700
+    hover:scale-105
+    lg:h-[420px]
+  "
+/>
 
 
                   {/* Image overlay */}
@@ -640,22 +640,21 @@ export default function PcbAssemblyPage() {
 
                 <div className="relative overflow-hidden rounded-[18px]">
 
-                  <Image
-                    src={procurementContent.image}
-                    alt="Component procurement"
-                    width={1200}
-                    height={700}
-                    className="
-                      h-[340px]
-                      w-full
-                      object-cover
-                      transition-transform
-                      duration-700
-                      hover:scale-105
-                      lg:h-[420px]
-                    "
-                  />
-
+              <Image
+  src="/services/componentprocurementimage.png"
+  alt="Component procurement"
+  width={1200}
+  height={700}
+  className="
+    h-[340px]
+    w-full
+    object-cover
+    transition-transform
+    duration-700
+    hover:scale-105
+    lg:h-[420px]
+  "
+/>
 
                   {/* Overlay */}
 
