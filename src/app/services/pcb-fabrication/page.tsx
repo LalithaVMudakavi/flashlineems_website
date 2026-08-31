@@ -938,7 +938,7 @@ export default function PcbFabricationPage() {
                 <div className="relative overflow-hidden rounded-[20px]">
 
                   <Image
-                    src="/images/pcb-fabrication/pcb-fabrication-main.jpg"
+                    src="/pcbfabrication.png"
                     alt="PCB fabrication and manufacturing"
                     width={1200}
                     height={800}

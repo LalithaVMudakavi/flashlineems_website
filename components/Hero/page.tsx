@@ -431,11 +431,11 @@ export function HeroSection() {
 
               {/* READ MORE */}
               <Link
-                href="/box-build"
+                href="/services/box-build"
                 className="
                   group
                   inline-flex
-                  h-[60px]
+                  h-[50px]
                   items-center
                   justify-center
                   gap-4
@@ -467,7 +467,7 @@ export function HeroSection() {
                 className="
                   group
                   inline-flex
-                  h-[60px]
+                  h-[50px]
                   items-center
                   justify-center
                   gap-4
