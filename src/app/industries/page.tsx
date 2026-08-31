@@ -15,7 +15,7 @@ const industries = [
     manufacturing competence. Only the most diligent contract manufacturer
     can match the precision and dependability requirements of the aerospace
     and aviation industries.`,
-    image: "/aerospace.png",
+    image: "/industries/aerospace.png",
     imageAlt: "Aerospace industry",
     reverse: false,
   },
@@ -32,7 +32,7 @@ const industries = [
     manufacturing competence. Only the most diligent contract manufacturer
     can match the precision and dependability requirements of the aerospace
     and aviation industries.`,
-    image: "/railway.png",
+    image: "/industries/railway.png",
     imageAlt: "Railways and transportation industry",
     reverse: true,
   },
@@ -51,7 +51,7 @@ const industries = [
     engineering and technology assists the world’s most trusted healthcare
     businesses to solve their most challenging product design and development
     challenges, from initial concept design to industrialization.`,
-    image: "/healthcare.png",
+    image: "/industries/healthcare.png",
     imageAlt: "Healthcare industry",
     reverse: false,
   },
@@ -69,7 +69,7 @@ const industries = [
     manufacturing services due to our industrial strength and competitiveness.
     We have been producing and assembling goods for several years and are
     recognized in the automotive industry.`,
-    image: "/automative.png",
+    image: "/industries/automative.png",
     imageAlt: "Automotive industry",
     reverse: true,
   },
@@ -89,7 +89,7 @@ const industries = [
     completely accredited and compatible with all manufacturing requirements
     required for high-reliability telecommunications end-markets, using design
     for excellence guidelines, lean manufacturing technology, and processes.`,
-    image: "/itandtelecom.png",
+    image: "/industries/itandtelecom.png",
     imageAlt: "IT and telecommunications industry",
     reverse: false,
   },
@@ -105,7 +105,7 @@ const industries = [
     We collaborate with our customers on extensive technical and business
     roadmaps using a diverse set of capabilities and years of manufacturing
     experience.`,
-    image: "/powerandenergy.png",
+    image: "/industries/powerandenergy.png",
     imageAlt: "Power and energy industry",
     reverse: true,
   },
