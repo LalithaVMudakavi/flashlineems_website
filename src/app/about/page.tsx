@@ -180,7 +180,7 @@ export default function AboutUsPage() {
             <div className="flex justify-center lg:justify-start">
               <div className="relative w-full max-w-[540px]">
                 <Image
-                  src="/hdirigidpcb.png"
+                  src="/pcbfabricationserviceimages/hdirigidpcb.png"
                   alt="PCB manufacturing"
                   width={540}
                   height={400}
