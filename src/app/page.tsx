@@ -849,7 +849,7 @@
 
 
 import { HeroSection } from "../../components/Hero/page";
-import PcbManufacturingSection from "../../components/home/pcb-manufacturing";
+import PcbManufacturingSection from "../../components/mainpagecontent";
 
 
 export default function Home() {
