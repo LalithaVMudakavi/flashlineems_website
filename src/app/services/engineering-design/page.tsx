@@ -1059,7 +1059,7 @@ const [isModalOpen, setIsModalOpen] = useState(false);
 
         <div className="relative overflow-hidden rounded-[24px] border border-[#E2E8F0] bg-[#F8FAFC] shadow-[0_20px_55px_rgba(38,54,77,0.08)]">
           <img
-            src="/engineer-design.png"
+            src="/services/engineer-design.png"
             alt="Engineering design and PCB development"
             className="
               h-[340px]
