@@ -442,7 +442,7 @@ const toggleSubSection = (section: string) => {
                 transition-all
                 duration-200
                 hover:bg-[#F8FAFC]
-                hover:text-[#2563EB]
+     
               "
             >
 
@@ -596,7 +596,7 @@ const toggleSubSection = (section: string) => {
                 transition-all
                 duration-200
                 hover:bg-[#F8FAFC]
-                hover:text-[#2563EB]
+       
               "
             >
 
@@ -903,6 +903,44 @@ const toggleSubSection = (section: string) => {
 
           </Link>
 
+            <Link
+            href="/certification"
+            onClick={() => setMenuOpen(false)}
+            className="
+              group
+              flex
+              h-12
+              w-full
+              items-center
+              justify-between
+              rounded-xl
+              px-3.5
+              text-sm
+              font-semibold
+              text-[#334155]
+              transition-all
+              duration-200
+              hover:bg-[#F8FAFC]
+              hover:text-[#2563EB]
+            "
+          >
+
+            <span>Certification</span>
+
+            <span
+              className="
+                text-[#CBD5E1]
+                transition-all
+                duration-200
+                group-hover:translate-x-1
+                group-hover:text-[#F15A24]
+              "
+            >
+              →
+            </span>
+
+          </Link>
+
 
           <Link
             href="/about"
@@ -1019,6 +1057,45 @@ const toggleSubSection = (section: string) => {
             </span>
 
           </Link>
+
+            <Link
+            href="/termsofuse"
+            onClick={() => setMenuOpen(false)}
+            className="
+              group
+              flex
+              h-12
+              w-full
+              items-center
+              justify-between
+              rounded-xl
+              px-3.5
+              text-sm
+              font-semibold
+              text-[#334155]
+              transition-all
+              duration-200
+              hover:bg-[#F8FAFC]
+              hover:text-[#2563EB]
+            "
+          >
+
+            <span>Terms of use</span>
+
+            <span
+              className="
+                text-[#CBD5E1]
+                transition-all
+                duration-200
+                group-hover:translate-x-1
+                group-hover:text-[#F15A24]
+              "
+            >
+              →
+            </span>
+
+          </Link>
+
 
         </nav>
 
