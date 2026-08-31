@@ -566,7 +566,7 @@ const pcbTypes = [
   {
     title: "HDI Rigid PCB",
     href: "/capabilities/pcb-fabrication/rigidpcb",
-    image: "/hdirigidpcb.png",
+    image: "/pcbfabricationserviceimages/hdirigidpcb.png",
     icon: Layers3,
     description:
       "High-density interconnect boards designed for compact and high-performance electronic applications.",
@@ -575,7 +575,7 @@ const pcbTypes = [
   {
     title: "HDI Flex PCB",
     href: "/capabilities/pcb-fabrication/rigid-flex-pcb",
-    image: "/hdiflexpcb.png",
+    image: "/pcbfabricationserviceimages/hdiflexpcb.png",
     icon: CircuitBoard,
     description:
       "Flexible PCB solutions designed for applications requiring compact routing and reliable flexibility.",
@@ -584,7 +584,7 @@ const pcbTypes = [
   {
     title: "HDI Rigid Flex PCB",
      href: "/capabilities/pcb-fabrication/rigid-flex-pcb",
-    image: "/hdiflexrigidpcb.png",
+    image: "/pcbfabricationserviceimages/hdiflexrigidpcb.png",
     icon: Cpu,
     description:
       "Rigid-flex solutions combining mechanical flexibility with reliable rigid board performance.",
@@ -593,7 +593,7 @@ const pcbTypes = [
   {
     title: "Metal-core PCB",
      href: "/capabilities/pcb-fabrication/metal-core-pcb",
-    image: "/metalcorepcb.png",
+    image: "/pcbfabricationserviceimages/metalcorepcb.png",
     icon: Factory,
     description:
       "Thermally efficient PCB solutions designed for demanding power and heat-management applications.",
