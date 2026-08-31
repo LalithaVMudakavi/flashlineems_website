@@ -293,12 +293,13 @@ export default function PcbManufacturingSection() {
             className="
               group
               mt-8
+              rounded-2xl
               inline-flex
               items-center
               gap-2
               bg-[#F15A24]
               px-6
-              py-4
+              py-3
               font-bold
               text-white
               transition-all
@@ -377,7 +378,7 @@ export default function PcbManufacturingSection() {
                     text-[#F15A24]
                     transition-all
                     duration-300
-                    group-hover:bg-[#EFF6FF]
+                    group-hover:bg-[#F15A24]
                     group-hover:text-white
                   "
                 >

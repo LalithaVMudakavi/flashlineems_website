@@ -1,219 +1,3 @@
-// "use client";
-
-// import { Menu, Search, X } from "lucide-react";
-// import Link from "next/link";
-// import { useState } from "react";
-
-// const navigation = [
-//   {
-//     label: "Solutions",
-//     items: [
-//       {
-//         label: "Engineering Design",
-//         href: "/services/engineering-design",
-//       },
-//       {
-//         label: "PCB Fabrication",
-//         href: "/services/pcb-fabrication",
-//       },
-//       {
-//         label: "PCB Assembly",
-//         href: "/services/pcb-assembly",
-//       },
-//       {
-//         label: "Testing",
-//         href: "/services/testing",
-//       },
-//       {
-//         label: "Box Build",
-//         href: "/services/box-build",
-//       },
-//     ],
-//   },
-//   {
-//     label: "Capabilities",
-//     items: [
-//       {
-//         label: "HDI PCB",
-//         href: "/capabilities/hdi-pcb",
-//       },
-//       {
-//         label: "Rigid PCB",
-//         href: "/capabilities/rigid-pcb",
-//       },
-//       {
-//         label: "Rigid-Flex PCB",
-//         href: "/capabilities/rigid-flex-pcb",
-//       },
-//       {
-//         label: "Flex PCB",
-//         href: "/capabilities/flex-pcb",
-//       },
-//       {
-//         label: "Metal-Core PCB",
-//         href: "/capabilities/metal-core-pcb",
-//       },
-//       {
-//         label: "SMT Assembly",
-//         href: "/capabilities/smt-assembly",
-//       },
-//       {
-//         label: "Inspection & Testing",
-//         href: "/capabilities/testing",
-//       },
-//     ],
-//   },
-// ];
-
-// export function Header() {
-//   const [menuOpen, setMenuOpen] = useState(false);
-
-//   return (
-//     <>
-//       <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur-xl">
-//         <div className="container-flashline flex h-20 items-center gap-6">
-//           <Link
-//             href="/"
-//             className="flex shrink-0 items-center"
-//             onClick={() => setMenuOpen(false)}
-//           >
-//             <div className="leading-none">
-//               <div className="text-xl font-black tracking-[-0.04em] text-[#0B1220] sm:text-2xl">
-//                 FLASHLINE
-//                 <span className="text-[#F4511E]"> EMS</span>
-//               </div>
-
-//               <div className="mt-1 text-[9px] font-semibold tracking-[0.22em] text-slate-500">
-//                 GLOBAL SUPPLYCHAIN PARTNER
-//               </div>
-//             </div>
-//           </Link>
-
-//           <div className="hidden flex-1 lg:block">
-//             <div className="mx-auto flex max-w-2xl items-center overflow-hidden rounded-xl border border-slate-300 bg-white">
-//               <input
-//                 type="search"
-//                 placeholder="Search capabilities, services & resources..."
-//                 className="h-12 min-w-0 flex-1 bg-transparent px-4 text-sm outline-none placeholder:text-slate-400"
-//               />
-
-//               <button
-//                 type="button"
-//                 aria-label="Search"
-//                 className="flex h-12 w-14 items-center justify-center bg-[#F4511E] text-white transition hover:bg-[#d93f12]"
-//               >
-//                 <Search size={21} />
-//               </button>
-//             </div>
-//           </div>
-
-//           {/* <Link
-//             href="/request-a-quote"
-//             className="ml-auto hidden bg-[#F4511E] px-5 py-3 text-sm font-bold text-white transition hover:bg-[#062D82] xl:block"
-//           >
-//             Request a Quote
-//           </Link> */}
-
-//           <button
-//             type="button"
-//             aria-label={menuOpen ? "Close menu" : "Open menu"}
-//             onClick={() => setMenuOpen((value) => !value)}
-//             className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg border border-slate-200 text-[#062D82] transition hover:border-[#F4511E] hover:text-[#F4511E]"
-//           >
-//             {menuOpen ? <X size={23} /> : <Menu size={23} />}
-//           </button>
-//         </div>
-//       </header>
-
-//       {menuOpen && (
-//         <div className="fixed inset-0 z-40 bg-slate-950/50">
-//           <div className="absolute right-0 top-20 h-[calc(100vh-5rem)] w-full max-w-md overflow-y-auto bg-[#062D82] text-white shadow-2xl">
-//             <div className="p-6 sm:p-8">
-//               <div className="mb-8">
-//                 <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#F4511E]">
-//                   Navigation
-//                 </p>
-
-//                 <h2 className="mt-2 text-2xl font-bold">
-//                   Explore Flashline
-//                 </h2>
-//               </div>
-
-//               <nav className="space-y-8">
-//                 <Link
-//                   href="/"
-//                   onClick={() => setMenuOpen(false)}
-//                   className="block border-b border-white/10 pb-4 text-lg font-semibold transition hover:text-[#F4511E]"
-//                 >
-//                   Home
-//                 </Link>
-
-//                 {navigation.map((group) => (
-//                   <div key={group.label}>
-//                     <p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-white/50">
-//                       {group.label}
-//                     </p>
-
-//                     <div className="space-y-2">
-//                       {group.items.map((item) => (
-//                         <Link
-//                           key={item.href}
-//                           href={item.href}
-//                           onClick={() => setMenuOpen(false)}
-//                           className="group flex items-center justify-between rounded-lg px-3 py-3 text-sm font-medium transition hover:bg-white/10 hover:text-[#F4511E]"
-//                         >
-//                           {item.label}
-
-//                           <span className="translate-x-0 opacity-40 transition group-hover:translate-x-1 group-hover:opacity-100">
-//                             →
-//                           </span>
-//                         </Link>
-//                       ))}
-//                     </div>
-//                   </div>
-//                 ))}
-
-//                 <div className="grid gap-2 border-t border-white/10 pt-6">
-//                   <Link
-//                     href="/industries"
-//                     onClick={() => setMenuOpen(false)}
-//                     className="rounded-lg px-3 py-3 font-semibold transition hover:bg-white/10 hover:text-[#F4511E]"
-//                   >
-//                     Industries
-//                   </Link>
-
-//                   <Link
-//                     href="/about"
-//                     onClick={() => setMenuOpen(false)}
-//                     className="rounded-lg px-3 py-3 font-semibold transition hover:bg-white/10 hover:text-[#F4511E]"
-//                   >
-//                     About Flashline
-//                   </Link>
-
-//                   <Link
-//                     href="/contact"
-//                     onClick={() => setMenuOpen(false)}
-//                     className="rounded-lg px-3 py-3 font-semibold transition hover:bg-white/10 hover:text-[#F4511E]"
-//                   >
-//                     Contact
-//                   </Link>
-//                 </div>
-
-//                 <Link
-//                   href="/request-a-quote"
-//                   onClick={() => setMenuOpen(false)}
-//                   className="flex items-center justify-center bg-[#F4511E] px-5 py-4 font-bold transition hover:bg-white hover:text-[#062D82]"
-//                 >
-//                   Start Your Project
-//                 </Link>
-//               </nav>
-//             </div>
-//           </div>
-//         </div>
-//       )}
-//     </>
-//   );
-// }
 
 
 "use client";
@@ -222,6 +6,7 @@ import { ChevronDown, Menu, Search, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 const navigation = [
   {
@@ -281,6 +66,9 @@ const navigation = [
 ];
 
 export function Header() {
+  const router = useRouter();
+const [searchQuery, setSearchQuery] = useState("");
+
   const [menuOpen, setMenuOpen] = useState(false);
 const [openSection, setOpenSection] = useState<string | null>(null);
 const [openSubSection, setOpenSubSection] = useState<string | null>(null);
@@ -328,53 +116,66 @@ const toggleSubSection = (section: string) => {
     </Link>
 
     {/* SEARCH */}
-    <div className="hidden min-w-0 flex-1 lg:block">
-      <div
-        className="
-          mx-auto flex h-[56px] w-full items-stretch
-          overflow-hidden rounded-[15px]
-          border border-[#d9dee8]
-          bg-[#f8fafc]
-          shadow-sm
-          transition-all duration-300
-          focus-within:border-[#062D82]/40
-          focus-within:bg-white
-          focus-within:shadow-[0_0_0_3px_rgba(6,45,130,0.08)]
-        "
-      >
-        <input
-          type="search"
-          aria-label="Search Product"
-          placeholder="Search Product..."
-          className="
-            min-w-0 flex-1
-            bg-white
-            px-5
-            text-[16px]
-            font-medium
-            text-[#0f172a]
-            outline-none
-            placeholder:text-[#64748b]
-            placeholder:font-normal
-          "
-        />
+<div className="hidden min-w-0 flex-1 lg:block">
+  <form
+    onSubmit={(e) => {
+      e.preventDefault();
 
-        <button
-          type="button"
-          aria-label="Search"
-          className="
-            flex w-[62px] shrink-0
-            items-center justify-center
-            bg-[#f4511e]
-            text-white
-            transition-all duration-300
-            hover:bg-[#e94716]
-          "
-        >
-          <Search size={27} strokeWidth={2.4} />
-        </button>
-      </div>
-    </div>
+      const query = searchQuery.trim();
+
+      if (!query) return;
+
+      router.push(`/?s=${encodeURIComponent(query)}`);
+    }}
+    className="
+      mx-auto flex h-[56px] w-full
+      items-stretch
+      overflow-hidden
+      rounded-[15px]
+      border border-[#d9dee8]
+      bg-[#f8fafc]
+      shadow-sm
+      transition-all duration-300
+      focus-within:border-[#062D82]/40
+      focus-within:bg-white
+      focus-within:shadow-[0_0_0_3px_rgba(6,45,130,0.08)]
+    "
+  >
+    <input
+      type="search"
+      aria-label="Search Product"
+      placeholder="Search Product..."
+      value={searchQuery}
+      onChange={(e) => setSearchQuery(e.target.value)}
+      className="
+        min-w-0 flex-1
+        bg-white
+        px-5
+        text-[16px]
+        font-medium
+        text-[#0f172a]
+        outline-none
+        placeholder:text-[#64748b]
+        placeholder:font-normal
+      "
+    />
+
+    <button
+      type="submit"
+      aria-label="Search"
+      className="
+        flex w-[62px] shrink-0
+        items-center justify-center
+        bg-[#f4511e]
+        text-white
+        transition-all duration-300
+        hover:bg-[#e94716]
+      "
+    >
+      <Search size={27} strokeWidth={2.4} />
+    </button>
+  </form>
+</div>
 
     {/* MOBILE SEARCH */}
 <button
