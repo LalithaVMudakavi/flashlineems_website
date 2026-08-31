@@ -592,7 +592,7 @@ export default function PcbManufacturingSection() {
                   Speak to us and find out more.
                 </span>
 
-                <Link
+                {/* <Link
                   href="/contact"
                   className="group inline-flex items-center gap-2 font-bold text-[#F15A24]"
                 >
@@ -601,14 +601,14 @@ export default function PcbManufacturingSection() {
                     size={17}
                     className="transition-transform group-hover:translate-x-1"
                   />
-                </Link>
+                </Link> */}
               </div>
 
               <Link
-                href="services/pcb-assembly"
-                className="group mt-8 inline-flex items-center gap-2 bg-[#F15A24] px-6 py-4 font-bold text-white shadow-[0_10px_25px_rgba(241,90,36,0.16)] transition hover:bg-[#E64A19]"
+                href="/contact"
+                className="group mt-3 inline-flex items-center gap-2 bg-[#F15A24] px-6 py-3 font-bold text-white shadow-[0_10px_25px_rgba(241,90,36,0.16)] transition hover:bg-[#E64A19] rounded-xl"
               >
-                Read more
+               Contact Us
                 <ArrowRight
                   size={18}
                   className="transition-transform group-hover:translate-x-1"
