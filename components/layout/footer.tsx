@@ -144,7 +144,7 @@ export function Footer() {
           <p>© {new Date().getFullYear()} Flashline EMS All rights reserved.</p>
 
           <Link
-            href="https://staging.flashlineems.com/term-of-use/"
+           href="/termsofuse"
             target="_blank"
             rel="noopener noreferrer"
             className="font-semibold text-[#062d82] transition hover:text-[#f4511e]"

@@ -415,12 +415,50 @@ const toggleSubSection = (section: string) => {
 
           </Link>
 
+               <Link
+            href="/services"
+            onClick={() => setMenuOpen(false)}
+            className="
+              group
+              flex
+              h-12
+              w-full
+              items-center
+              justify-between
+              rounded-xl
+              px-3.5
+              text-sm
+              font-semibold
+              text-[#334155]
+              transition-all
+              duration-200
+              hover:bg-[#F8FAFC]
+              hover:text-[#2563EB]
+            "
+          >
+
+            <span>Services</span>
+
+            <span
+              className="
+                text-[#CBD5E1]
+                transition-all
+                duration-200
+                group-hover:translate-x-1
+                group-hover:text-[#F15A24]
+              "
+            >
+              →
+            </span>
+
+          </Link>
+
 
           {/* =================================================
               SERVICES
           ================================================== */}
 
-          <div>
+          {/* <div>
 
             <button
               type="button"
@@ -483,12 +521,12 @@ const toggleSubSection = (section: string) => {
 
               </span>
 
-            </button>
+            </button> */}
 
 
             {/* SERVICES CHILDREN */}
 
-            <div
+            {/* <div
               className={`
                 grid
                 transition-all
@@ -564,13 +602,13 @@ const toggleSubSection = (section: string) => {
 
             </div>
 
-          </div>
+          </div> */}
 
 
           {/* =================================================
               CAPABILITIES
           ================================================== */}
-
+{/* 
           <div>
 
             <button
@@ -637,11 +675,11 @@ const toggleSubSection = (section: string) => {
 
               </span>
 
-            </button>
+            </button> */}
 
 
             {/* CAPABILITIES CHILDREN */}
-
+{/* 
             <div
               className={`
                 grid
@@ -664,11 +702,11 @@ const toggleSubSection = (section: string) => {
                     border-[#E2E8F0]
                     pl-3
                   "
-                >
+                > */}
 
                   {/* PCB ASSEMBLY */}
 
-                  <Link
+                  {/* <Link
                     href="/capabilities/pcb-assembly-2"
                     onClick={() => setMenuOpen(false)}
                     className="
@@ -707,11 +745,11 @@ const toggleSubSection = (section: string) => {
                     </span>
 
                   </Link>
-
+ */}
 
                   {/* PCB FABRICATION */}
 
-                  <div>
+                  {/* <div>
 
                     <button
                       type="button"
@@ -759,12 +797,12 @@ const toggleSubSection = (section: string) => {
                         `}
                       />
 
-                    </button>
+                    </button> */}
 
 
                     {/* PCB FABRICATION CHILDREN */}
 
-                    <div
+                    {/* <div
                       className={`
                         grid
                         transition-all
@@ -852,7 +890,45 @@ const toggleSubSection = (section: string) => {
             </div>
 
           </div>
+ */}
 
+        <Link
+            href="/capabilities"
+            onClick={() => setMenuOpen(false)}
+            className="
+              group
+              flex
+              h-12
+              w-full
+              items-center
+              justify-between
+              rounded-xl
+              px-3.5
+              text-sm
+              font-semibold
+              text-[#334155]
+              transition-all
+              duration-200
+              hover:bg-[#F8FAFC]
+              hover:text-[#2563EB]
+            "
+          >
+
+            <span>Capabilities</span>
+
+            <span
+              className="
+                text-[#CBD5E1]
+                transition-all
+                duration-200
+                group-hover:translate-x-1
+                group-hover:text-[#F15A24]
+              "
+            >
+              →
+            </span>
+
+          </Link>
 
           {/* =================================================
               DIVIDER
